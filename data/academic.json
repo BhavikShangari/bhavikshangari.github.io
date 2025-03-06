@@ -1,0 +1,54 @@
+{"academic":
+    [
+        {
+            "place": "Department of Computer Science, University of Toronto",
+            "start": "2023",
+            "end": "now",
+            "title": "Associate Professor"
+        },
+        {
+            "place": "Vector Institute",
+            "start": "2023",
+            "end": "now",
+            "title": "Associate Research Director"
+        },
+        {
+            "place": "Hugging Face",
+            "start": "2021",
+            "end": "now",
+            "title": "Faculty Researcher"
+        },
+        {
+            "place": "Department of Computer Science, UNC Chapel Hill",
+            "start": "2020",
+            "end": "2023",
+            "title": "Assistant Professor"
+        },
+        {
+            "place": "Google Brain",
+            "start": "2020",
+            "end": "2021",
+            "title": "Staff Research Scientist"
+        },
+        {
+            "place": "Google Brain",
+            "start": "2018",
+            "end": "2020",
+            "title": "Senior Research Scientist"
+        },
+        {
+            "place": "Google Brain",
+            "start": "2017",
+            "end": "2018",
+            "title": "Research Scientist"
+        },
+        {
+            "place": "Google Brain",
+            "start": "2016",
+            "end": "2017",
+            "title": "Resident"
+        }
+    ]
+}
+
+
