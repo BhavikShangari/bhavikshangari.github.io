@@ -681,6 +681,10 @@
                 scrollbar-width: thin;
             }
 
+            .robotics-canvas {
+                display: none;
+            }
+
             .hero::before {
                 background:
                     linear-gradient(180deg, rgba(5, 7, 12, 0.78) 0%, rgba(5, 7, 12, 0.96) 58%, rgba(5, 7, 12, 0.98) 100%),
@@ -688,13 +692,64 @@
             }
 
             .hero-content {
-                padding: 40px 0 34px;
-                gap: 28px;
+                padding: 28px 0 30px;
+                gap: 22px;
             }
 
             .hero-actions,
             nav {
                 gap: 8px;
+            }
+
+            .eyebrow {
+                font-size: 0.72rem;
+                margin-bottom: 16px;
+            }
+
+            .eyebrow::before {
+                width: 26px;
+            }
+
+            h1 {
+                font-size: 2.65rem;
+                line-height: 0.96;
+            }
+
+            .hero-actions {
+                margin-top: 22px;
+            }
+
+            .hero-actions .link-chip:nth-of-type(n+4) {
+                display: none;
+            }
+
+            .primary-action,
+            .link-chip {
+                min-height: 38px;
+                padding: 0 13px;
+                font-size: 0.86rem;
+            }
+
+            .profile-panel {
+                width: min(282px, 100%);
+                justify-self: center;
+                padding: 12px;
+                animation: none;
+                transform: none;
+                translate: none !important;
+            }
+
+            .profile-panel img {
+                aspect-ratio: 1 / 1.02;
+            }
+
+            .status-grid {
+                gap: 8px;
+                margin-top: 10px;
+            }
+
+            .status {
+                padding: 8px;
             }
 
             .projects-grid,
@@ -1134,6 +1189,15 @@
             ctx.lineJoin = "round";
 
             const profilePanel = document.querySelector(".profile-panel");
+            if (width < 760) {
+                profilePanel.style.translate = "0 0";
+                ctx.restore();
+                if (!motionQuery.matches) {
+                    requestAnimationFrame(drawRoboticsScene);
+                }
+                return;
+            }
+
             heroRect = canvas.closest(".hero").getBoundingClientRect();
             profilePanel.style.translate = "0 0";
             panelRect = profilePanel.getBoundingClientRect();
